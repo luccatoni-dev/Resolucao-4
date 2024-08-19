@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Números</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #80deea); /* Gradiente de fundo */
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            width: 90%;
+            text-align: center;
+            border: 2px solid #00796b; /* Borda sutil */
+        }
+        h1 {
+            color: #00796b;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            background-color: #00796b;
+            color: #ffffff;
+            margin: 8px 0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Números</h1>
+        <ul id="listaNumeros"></ul>
+    </div>
+
+    <script>
+        // Obtém o elemento <ul> onde a lista será inserida
+        const lista = document.getElementById('listaNumeros');
+
+        // Laço para gerar números de 1 a 10
+        for (let i = 1; i <= 10; i++) {
+            // Adiciona o número ao console
+            console.log(i);
+
+            // Cria um novo item de lista
+            const item = document.createElement('li');
+            item.textContent = i;
+
+            // Adiciona o item de lista ao <ul>
+            lista.appendChild(item);
+        }
+    </script>
+</body>
+</html>
+
